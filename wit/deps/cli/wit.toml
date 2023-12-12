@@ -1,0 +1,8 @@
+version = "0.1.0"
+
+[dependencies]
+"wasi:filesystem" = { path = "../filesystem" }
+"wasi:sockets" = { path = "../sockets" }
+"wasi:clocks" = { path = "../clocks" }
+"wasi:random" = { path = "../random" }
+"wasi:io" = { path = "../io" }
