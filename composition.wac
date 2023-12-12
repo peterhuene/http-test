@@ -2,6 +2,6 @@ package component:service;
 
 let middleware = new component:middleware { ... };
 
-let proxy = new component:proxy { outgoing-handler: middleware.outgoing-handler, ... };
+let proxy = new component:proxy { exec: middleware.exec, ... };
 
 export proxy.incoming-handler;

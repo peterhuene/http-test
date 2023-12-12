@@ -1,7 +1,7 @@
 cargo_component_bindings::generate!();
 
 use bindings::{
-    exports::wasi::http::outgoing_handler::Guest,
+    exports::component::middleware::exec::Guest,
     wasi::http::outgoing_handler::{
         self, ErrorCode, FutureIncomingResponse, OutgoingRequest, RequestOptions,
     },
@@ -10,7 +10,7 @@ use bindings::{
 struct Component;
 
 impl Guest for Component {
-    fn handle(
+    fn exec(
         request: OutgoingRequest,
         options: Option<RequestOptions>,
     ) -> Result<FutureIncomingResponse, ErrorCode> {

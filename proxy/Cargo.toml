@@ -6,6 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+anyhow = "1.0.75"
 cargo-component-bindings = "0.5.0"
 
 [lib]
@@ -22,5 +23,6 @@ package = "component:proxy"
 "wasi:cli" = { path = "../wit/deps/cli" }
 "wasi:filesystem" = { path = "../wit/deps/filesystem" }
 "wasi:sockets" = { path = "../wit/deps/sockets" }
+"component:middleware" = { path = "../middleware/wit" }
 
 [package.metadata.component.dependencies]
